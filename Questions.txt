@@ -172,3 +172,66 @@ B) doOtherStuff
 C) doBaseStuff
 D) Exception at runtime
 E) Compilation failure
+
+Q) Given:
+    Object obj = "Hello";
+    if (obj instanceof String) {
+      String str = (String)obj;
+      if (str.length() > 3) {
+        System.out.println(str);
+      } else {
+        System.out.println("Too short");
+      }
+    }
+Which replace the if clause to produce the same output?
+A)    System.out.println(obj instanceof String str && str.length() > 3 ? str : "Too short");
+B)    if (obj instanceof String str when str.length() > 3)
+        System.out.println(str);
+      else
+        System.out.println("Too short");
+C)    if (obj instanceof String str if str.length() > 3)
+        System.out.println(str);
+      else
+        System.out.println("Too short");
+D)    System.out.println(obj instanceof String.class str && str.length() > 3 ? str : "Too short");
+E)    if (obj instanceof String str && str.length() > 3)
+        System.out.println(str);
+      else
+        System.out.println("Too short");
+
+Q) Given:
+String s = "Hello";
+switch (s) {
+  case "Hello" ->
+      System.out.print("Bonjour "); // line n1
+      System.out.print("Guten Tag ");
+  default -> System.out.print("Bye");
+}
+
+Which is true?
+A) The code prints: Bonjour Guten Tag Bye
+B) The code prints: Bonjour Guten Tag
+C) If line n1 is removed the code prints: Guten Tag Bye
+D) If line n1 is removed the code prints: Guten Tag
+E) The code fails to compile
+
+Q)Given
+short s = 8;
+System.out.println(switch (s) { // line n1
+  // line n2
+  default -> "It's something else";
+});
+Which are true?
+A) Compilation fails at line n1
+B) The code runs and prints It's something else
+C) Adding at line n2
+   case 2,4,6,8 -> "Even < 10";
+   gives the output Even < 10
+D) Adding at line n2
+   case 2|4|6|8 -> "Even < 10";
+   gives the output Even < 10
+E) Adding at line n2
+   case 2 -> case 4 -> case 6 -> case 8 -> "Even < 10";
+   gives the output Even < 10
+
+

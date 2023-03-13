@@ -30,7 +30,7 @@ public class Ex {
     // this cast could NEVER be valid and is rejected
 //    ((String)b)
 
-    ((Runnable) b).run();
+//    ((Runnable) b).run();
   }
 }
 
