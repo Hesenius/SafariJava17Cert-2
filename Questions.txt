@@ -119,3 +119,56 @@ C) -1
 D) 0x00000005
 E) 5
 
+Q) Given:
+  public static boolean v1() {
+    return true;
+  }
+  public static boolean v2() {
+    throw new RuntimeException();
+  }
+and:
+System.out.println(v1() || v2());
+
+What is the result:
+A) Compilation fails
+B) Exception
+C) true
+D) false
+E) true, followed byan exception
+
+Q) Given
+class Thing {
+  int x = 99;
+
+  static void showIt() {
+    int x = 98;
+    System.out.println("x is " + x);
+  }
+}
+
+What is the effect of:
+Thing.showIt();
+
+A) Compilation fails
+B) Exception
+C) 99
+D) 98
+
+Q) Given:
+class Base {
+  void doBaseStuff() { System.out.println("doBaseStuff"); }
+}
+class Sub extends Base {
+  void doBaseStuff() { System.out.println("doSubStuff"); }
+  void doOtherStuff() { System.out.println("doOtherStuff"); }
+}
+and:
+Base b = new Sub();
+((Runnable) b).run();
+
+What is the result?
+A) doSubStuff
+B) doOtherStuff
+C) doBaseStuff
+D) Exception at runtime
+E) Compilation failure
